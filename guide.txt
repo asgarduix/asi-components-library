@@ -51,58 +51,82 @@ delete 刪除：delete_member(id) //刪除編號id的會員
 === tailwind css =======================================================
 本次專案導入css管理框架『tailwind css』
 tailwind css 官網：https://tailwindcss.com/docs/installation
-------------------------------------------------------------------------
-打開終端機，安裝步驟如下：
-(1)npm install -D tailwindcss postcss postcss-cli autoprefixer
->>>
+
+（定義）
 tailwindcss：tailwind的主套件
 postcss：css編譯打包套件
 autoprefixer：自動於部分css設定前加上瀏覽器前綴
+postcss-import：避免inport失敗的輔助套件
+
+
+（兩種安裝方式）
+a. 指令安裝
+b. 手動安裝
+
+{a. 指令安裝}
+------------------------------------------------------------------------
+建立完vue專案後，繼續輸入指令『vue add tailwind』，則npm會自動幫我們安裝tailwind相關套件，包含：
+01. assets > tailwind.css
+02. tailwind.config.js
+03. postcss.config.js
+
+另外需再安裝：
+01. npm install -D autoprefixer
+02. npm install -D postcss-import
+03. npm install -D postcss-cli
+
+
+相關說明請參閱：
+https://medium.com/coding-hot-pot/%E5%A6%82%E4%BD%95%E7%94%A8vue-cli-%E6%90%AD%E9%85%8Dtailwind-css%E9%96%8B%E7%99%BC-42c0f0dc3d3a
+
+
+{b. 手動安裝}
+------------------------------------------------------------------------
+打開終端機，安裝步驟如下：
+(1)npm install -D tailwindcss postcss postcss-cli autoprefixer
 ------------------------------------------------------------------------
 (2)npm install -D postcss-import
->>>
-避免inport失敗的輔助套件
 ------------------------------------------------------------------------
 (3)npx tailwind init --full
 >>>
 建立完整『tailwind.config.js』，並修改content設定：
-content: ["src/*.{html,vue}","src/**/*.{html,vue}"],
-上述設定代表src資料夾以下所有副檔名為『html』及『vue』檔案都套用tailwind設定
+content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+上述設定代表src資料夾以下所有副檔名為『html』『vue』『js』『ts』『jsx』『tsx』檔案都套用tailwind設定
 ------------------------------------------------------------------------
 (4)新增『postcss.config.js』，建立內容：
 module.exports = {
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ]
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+  }
 }
 ------------------------------------------------------------------------
 (5)檔案設定
-5-1.
+(5-1)
 於『package.json』中的"script"內加入：
-"build:css": "postcss src/css/main.css -o src/css/output.css"
+"build:css": "postcss src/css/tailwind.css -o src/css/basic.css"
 >>>
-其中『main.css』及『output.css』可依需求變更名稱及位置
-『main.css』檔案須先加入內容：
+其中『tailwind.css』及『basic.css』可依需求變更名稱及位置
+『tailwind.css』檔案須先加入內容：
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-上述設定完成後，使用『npm run build:css』則會於css資料夾內自動產生『output.css』檔案，轉譯本次使用到的tailwind設定
+上述設定完成後，使用『npm run build:css』則會於css資料夾內自動產生『baisc.css』檔案，轉譯本次使用到的tailwind設定
 
-05-2.
+(5-2)
 於『App.vue』檔案內引入tailwind build出的css：
 // tailwindcss
-import "./css/output.css";
+import "./css/basic.css";
 >>>
-其中『output.css』可依需求變更名稱及位置
+其中『basic.css』可依需求變更名稱及位置
 ------------------------------------------------------------------------
-(6)撰寫方法
+（撰寫方法）
 於html或vue的內容（ex:div）直接使用tailwind定義的class name
+如想設定粗體文字，則於div上加入『font-bold』，該div內容呈現文字粗體。
 
-可參閱『layout』
+更多設定可參閱官網『layout』
 https://tailwindcss.com/docs/aspect-ratio
-
 
 
 

@@ -2,7 +2,7 @@
     <div id="canvas">
         <div class="frame">
             <!-- START: HEADER -->
-            <div class="frame__module header">
+            <div class="frame__module header bg-sky-100 font-bold">
                 <!-- START: HEADER__logo -->
                 <div class="h__logo">logo</div>
                 <!-- END: HEADER__logo -->
@@ -18,9 +18,9 @@
             </div>
             <!-- END: HEADER -->
             <!-- START: CONTENT -->
-            <div class="frame__module content">
+            <div class="frame__module content flex bg-green-50">
                 <!-- c__nav -->
-                <div class="c__nav">
+                <div class="c__nav w-60">
                     <!-- c__nav-search -->
                     <div class="c__nav-search">nav-search</div>
                     <!-- c__nav-link -->
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <!-- c__views -->
-                <div class="c__views">
+                <div class="c__views flex-1 bg-red-100">
                     views
                 </div>
             </div>
@@ -70,6 +70,9 @@ export default {
     name: "Page",
     components: {
         // Header,
+    },
+    created() {
+
     },
     data() {
         return {};

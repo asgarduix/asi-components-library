@@ -1,15 +1,36 @@
 【項目】
+.npm rub build
 .元件建立
 .命名規則
+.tailwind css
 
 
 【項目說明】
-=== 元件建立 ===
+=== npm rub build =======================================================
+build出後的檔案夾『dist』需放進伺服器內才能執行。
+伺服器路徑需至『vue.config.js』內設定以下資訊：
+
+publicPath: process.env.NODE_ENV === 'production'
+  ? '/(資料夾名稱)/dist'
+  : '/'
+
+*請替換( )本身及內容。
+如伺服器位置為127.0.0.1，build出後的檔案需放到『test』資料夾內，因此需變更為：
+publicPath: process.env.NODE_ENV === 'production'
+  ? '/test/dist'
+  : '/'
+
+瀏覽器輸入『127.0.0.1/test/dist/』即可瀏覽畫面。
+
+可參考：https://cli.vuejs.org/zh/config/#publicpath
+
+=== 元件建立 =======================================================
 建立區塊化的模組，方便開發者取用。
 每個區塊使用『<!--START: (區塊名稱) -->』及『<!-- END: (區塊名稱) -->』包夾。
 預期應降低耦合，每組區塊皆有獨立的css或js設定，達到模組化組合概念。
 
-=== 命名規則 ===
+
+=== 命名規則 =======================================================
 依循BEM規範(Block + Element + Modifier)
 Block：泛指區塊，如：header、nav...等
 Element：泛指元素，如：header下的item...等
@@ -25,5 +46,85 @@ js方法命名則使用『動詞』為綴詞
 以REST Style為例
 get 取值：get_member(id) //取得編號id的會員
 delete 刪除：delete_member(id) //刪除編號id的會員
+
+
+=== tailwind css =======================================================
+本次專案導入css管理框架『tailwind css』
+tailwind css 官網：https://tailwindcss.com/docs/installation
+------------------------------------------------------------------------
+打開終端機，安裝步驟如下：
+(1)npm install -D tailwindcss postcss postcss-cli autoprefixer
+>>>
+tailwindcss：tailwind的主套件
+postcss：css編譯打包套件
+autoprefixer：自動於部分css設定前加上瀏覽器前綴
+------------------------------------------------------------------------
+(2)npm install -D postcss-import
+>>>
+避免inport失敗的輔助套件
+------------------------------------------------------------------------
+(3)npx tailwind init --full
+>>>
+建立完整『tailwind.config.js』，並修改content設定：
+content: ["src/*.{html,vue}","src/**/*.{html,vue}"],
+上述設定代表src資料夾以下所有副檔名為『html』及『vue』檔案都套用tailwind設定
+------------------------------------------------------------------------
+(4)新增『postcss.config.js』，建立內容：
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
+}
+------------------------------------------------------------------------
+(5)檔案設定
+5-1.
+於『package.json』中的"script"內加入：
+"build:css": "postcss src/css/main.css -o src/css/output.css"
+>>>
+其中『main.css』及『output.css』可依需求變更名稱及位置
+『main.css』檔案須先加入內容：
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+上述設定完成後，使用『npm run build:css』則會於css資料夾內自動產生『output.css』檔案，轉譯本次使用到的tailwind設定
+
+05-2.
+於『App.vue』檔案內引入tailwind build出的css：
+// tailwindcss
+import "./css/output.css";
+>>>
+其中『output.css』可依需求變更名稱及位置
+------------------------------------------------------------------------
+(6)撰寫方法
+於html或vue的內容（ex:div）直接使用tailwind定義的class name
+
+可參閱『layout』
+https://tailwindcss.com/docs/aspect-ratio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

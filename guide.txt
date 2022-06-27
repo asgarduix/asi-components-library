@@ -1,0 +1,29 @@
+【項目】
+.元件建立
+.命名規則
+
+
+【項目說明】
+=== 元件建立 ===
+建立區塊化的模組，方便開發者取用。
+每個區塊使用『<!--START: (區塊名稱) -->』及『<!-- END: (區塊名稱) -->』包夾。
+預期應降低耦合，每組區塊皆有獨立的css或js設定，達到模組化組合概念。
+
+=== 命名規則 ===
+依循BEM規範(Block + Element + Modifier)
+Block：泛指區塊，如：header、nav...等
+Element：泛指元素，如：header下的item...等
+Modifier：泛指元素的作動狀態，如：header內的item目前正處於active狀態，可標記為『header__item--active』
+
+區塊與元素間的連結使用『__』（兩道底線），元素與狀態間的連結使用『--』（兩道中線）
+命名時須遵循父層子層關係
+
+如碰到元素命名超過一個字時，使用『-』連結，如：header__item-inner--active
+命名長度盡量以不超過三層為原則
+
+js方法命名則使用『動詞』為綴詞
+以REST Style為例
+get 取值：get_member(id) //取得編號id的會員
+delete 刪除：delete_member(id) //刪除編號id的會員
+
+

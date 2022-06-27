@@ -2,41 +2,62 @@
     <div id="canvas">
         <div class="frame">
             <!-- START: HEADER -->
-            <div class="frame-module header">
-                <!-- START: HEADER-logo -->
-                <div class="header-logo">logo</div>
-                <!-- END: HEADER-logo -->
-                <!-- START: HEADER-search -->
-                <div class="header-search">header-search</div>
-                <!-- END: HEADER-search -->
-                <!-- START: HEADER-topic -->
-                <div class="header-topic">topic</div>
-                <!-- END: HEADER-topic -->
-                <!-- START: HEADER-version -->
-                <div class="header-version">version</div>
-                <!-- END: HEADER-version -->
+            <div class="frame__module header">
+                <!-- START: HEADER__logo -->
+                <div class="h__logo">logo</div>
+                <!-- END: HEADER__logo -->
+                <!-- START: HEADER__search -->
+                <div class="h__search">header-search</div>
+                <!-- END: HEADER__search -->
+                <!-- START: HEADER__topic -->
+                <div class="h__topic">topic</div>
+                <!-- END: HEADER__topic -->
+                <!-- START: HEADER__version -->
+                <div class="h__version">version</div>
+                <!-- END: HEADER__version -->
             </div>
             <!-- END: HEADER -->
-            <hr/>
-            <!-- START: MENU -->
-            <div class="frame-module menu">
-                <!-- START: Menu-search -->
-                <div class="menu-search">menu-search</div>
-                <!-- END: Menu-search -->
-                <!-- START: MENU-link -->
-                <div class="menu-link">link</div>
-                <!-- END: MENU-link -->
-            </div>
-            <!-- END: MENU -->
-            <hr/>
             <!-- START: CONTENT -->
-            <div class="frame-module content">
-                content
+            <div class="frame__module content">
+                <!-- c__nav -->
+                <div class="c__nav">
+                    <!-- c__nav-search -->
+                    <div class="c__nav-search">nav-search</div>
+                    <!-- c__nav-link -->
+                    <div class="c__nav-link">
+                        <!-- c__nav-link-item -->
+                        <div class="c__nav-link-item">
+                            <div class="c__nav-link-item--primary">
+                                <a href="#">更新日誌(primary)</a>
+                            </div>
+                        </div>
+                        <!-- c__nav-link-item -->
+                        <div class="c__nav-link-item">
+                            <div class="c__nav-link-item--primary">
+                                <a href="#">更新日誌(primary)</a>
+                            </div>
+                            <div class="c__nav-link-item--secondary">secondary</div>
+                            <div class="c__nav-link-item--tertiary">
+                                <ul>
+                                    <li><a href="#">tertiary01</a></li>
+                                    <li><a href="#">tertiary02</a></li>
+                                    <li><a href="#">tertiary03</a></li>
+                                    <li><a href="#">tertiary04</a></li>
+                                    <li><a href="#">tertiary05</a></li>
+                                    <li><a href="#">tertiary06</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- c__views -->
+                <div class="c__views">
+                    views
+                </div>
             </div>
             <!-- END: CONTENT -->
-            <hr/>
             <!-- START: FOOTER -->
-            <div class="frame-module footer">
+            <div class="frame__module footer">
                 footer
             </div>
             <!-- END: FOOTER -->

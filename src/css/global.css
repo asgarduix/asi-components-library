@@ -47,7 +47,7 @@ body {
 
 a,
 button {
-    outline: none !important;
+    outline: none;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
@@ -166,6 +166,11 @@ h4,
 h5,
 h6 {
     margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 @media only screen and (max-width: 1280px) {}

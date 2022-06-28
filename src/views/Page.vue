@@ -2,7 +2,7 @@
     <div id="canvas">
         <div class="frame">
             <!-- START: HEADER -->
-            <div class="frame__module header bg-sky-100 font-bold">
+            <div class="bg-sky-100 font-bold frame__module header">
                 <!-- START: h__logo -->
                 <div class="h__logo">logo</div>
                 <!-- END: h__logo -->
@@ -18,9 +18,9 @@
             </div>
             <!-- END: HEADER -->
             <!-- START: CONTENT -->
-            <div class="frame__module content flex bg-green-50">
+            <div class="flex bg-green-50 frame__module content">
                 <!-- c__nav -->
-                <div class="c__nav w-60">
+                <div class="w-60 c__nav ">
                     <!-- c__nav-search -->
                     <div class="c__nav-search">nav-search</div>
                     <!-- c__nav-link -->
@@ -51,13 +51,13 @@
                     </div>
                 </div>
                 <!-- c__views -->
-                <div class="c__views flex-1 bg-red-100">
+                <div class="flex-1 bg-red-100 c__views">
                     views
                 </div>
             </div>
             <!-- END: CONTENT -->
             <!-- START: FOOTER -->
-            <div class="frame__module footer bg-yellow-100 font-bold">
+            <div class="bg-yellow-100 frame__module footer">
                 footer
             </div>
             <!-- END: FOOTER -->

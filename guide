@@ -4,6 +4,7 @@
 .命名規則
 .tailwind css
 
+
 【項目說明】
 === .npm rub build =======================================================
 build出後的檔案夾『dist』需放進伺服器內才能執行。
@@ -51,8 +52,9 @@ delete 刪除：delete_member(id) //刪除編號id的會員
 
 === .tailwind css =======================================================
 本次專案導入css管理框架『tailwind css』
-tailwind css 官網：https://tailwindcss.com/docs/installation
-
+tailwind css 官網
+英文：https://tailwindcss.com/docs/installation（已支援到v3.x.x）
+中文：https://www.tailwindcss.cn/docs/installation（目前只支援到v2.x.x）
 
 （定義）
 tailwindcss：tailwind的主套件
@@ -110,6 +112,10 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;
 
+base：基礎
+components：組件
+utilities：功能
+
 上述設定完成後，使用『npm run build:css』則會於css資料夾內自動產生『baisc.css』檔案，轉譯本次使用到的tailwind設定
 
 (4-2)
@@ -124,5 +130,99 @@ import "./css/basic.css";
 如想設定粗體文字，則於div上加入『font-bold』，該div內容呈現文字粗體。
 更多設定可參閱官網『layout』
 https://tailwindcss.com/docs/aspect-ratio
+
+目前設計可能為：tailwind + bem 的綜合撰寫方式
+
+tailwind class撰寫順序建議：
+01.寬度/長度設定（width/height）
+02.內外距（margin/padding）
+03.位置（position）
+04.線框/圓角（border/border-radius）
+05.文字（font）
+06.背景（background）
+07.其他（box-shadow...等）
+
+
+最後才加入bem class，css設定撰寫於『customize.css』
+
+自定義css內可使用『@apply (tailwind clsss)』定義物件樣式（不需在div上加tailwind class）
+(範例)
+在頁面上有個classname為『footer』的div，tailwind的寫法會將設定寫在div上
+但如果使用@apply即可將設定寫在css檔案內，為：
+.footer {
+	@apply font-bold hover:bg-sky-100;
+}
+
+>> 文字呈現粗體，滑鼠滑入後footer區塊背景色變為淺藍色。
+------------------------------------------------------------------------
+＊一般css撰寫方法與@apply可混用
+＊@apply層級大過行內設定
+＊將分層清楚標記將可避免特定問題，如：
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-blue {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+
+
+@layer：自定義樣式應屬於哪個區間，包含：base、components、utilities，如：
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+------------------------------------------------------------------------
+@variants：宣告功能，包含：
+@variants focus, hover {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+}
+
+css生成為
+.rotate-0 {
+  transform: rotate(0deg);
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.focus\:rotate-0:focus {
+  transform: rotate(0deg);
+}
+.focus\:rotate-90:focus {
+  transform: rotate(90deg);
+}
+
+.hover\:rotate-0:hover {
+  transform: rotate(0deg);
+}
+.hover\:rotate-90:hover {
+  transform: rotate(90deg);
+}
+------------------------------------------------------------------------
+自定義顏色方法
+https://www.tailwindcss.cn/docs/customizing-colors
+
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 

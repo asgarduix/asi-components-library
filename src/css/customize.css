@@ -1,4 +1,6 @@
-/* for PG */
+.footer {
+	@apply bg-green-700;
+}
 
 @media only screen and (max-width: 1280px) {
 }

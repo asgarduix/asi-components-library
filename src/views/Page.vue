@@ -3,18 +3,18 @@
         <div class="frame">
             <!-- START: HEADER -->
             <div class="frame__module header bg-sky-100 font-bold">
-                <!-- START: HEADER__logo -->
+                <!-- START: h__logo -->
                 <div class="h__logo">logo</div>
-                <!-- END: HEADER__logo -->
-                <!-- START: HEADER__search -->
+                <!-- END: h__logo -->
+                <!-- START: h__search -->
                 <div class="h__search">header-search</div>
-                <!-- END: HEADER__search -->
-                <!-- START: HEADER__topic -->
+                <!-- END: h__search -->
+                <!-- START: h__topic -->
                 <div class="h__topic">topic</div>
-                <!-- END: HEADER__topic -->
-                <!-- START: HEADER__version -->
+                <!-- END: h__topic -->
+                <!-- START: h__version -->
                 <div class="h__version">version</div>
-                <!-- END: HEADER__version -->
+                <!-- END: h__version -->
             </div>
             <!-- END: HEADER -->
             <!-- START: CONTENT -->
@@ -57,7 +57,7 @@
             </div>
             <!-- END: CONTENT -->
             <!-- START: FOOTER -->
-            <div class="frame__module footer">
+            <div class="frame__module footer bg-yellow-100 font-bold">
                 footer
             </div>
             <!-- END: FOOTER -->

@@ -3,6 +3,11 @@ module.exports = {
     content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     presets: [],
     darkMode: 'media', // or 'class'
+    mode: 'jit',
+    // These paths are just examples, customize them to match your project structure
+    purge: [
+        './public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'
+    ],
     theme: {
         screens: {
             sm: '640px',

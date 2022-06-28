@@ -1,5 +1,5 @@
 <template>
-    <div>test</div>
+    <div>awojef;oakdfo;/</div>
 </template>
 <script>
 export default {

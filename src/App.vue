@@ -1,25 +1,39 @@
 <template>
-    <router-view />
+    <div>
+        <!-- START: HEADER -->
+        <Header />
+        <!-- END: HEADER -->
+        <div id="canvas">
+            <div class="frame">
+                <!-- START: CONTENT -->
+                <div class="flex bg-green-50 frame__module content">
+                    <!-- c__nav -->
+                    <Menu />
+                    <!-- c__views -->
+                    <div class="flex-1 bg-red-100 c__views">
+                        <router-view />
+                    </div>
+                </div>
+                <!-- END: CONTENT -->
+            </div>
+        </div>
+        <!-- START: FOOTER -->
+        <Footer />
+        <!-- END: FOOTER -->
+    </div>
 </template>
 <script>
-// icon
-import "./css/material-icons.css";
-import "./css/material-icons-ie.css";
-// tabulator
-import "./css/tabulator.min.css";
-// tailwind
-import "./css/tailwind.css";
-// tailwind > postcss
-// import "./css/tailwind.css";
-// customize
-import "./css/customize.css";
-// pg
-import "./css/pg.css";
+// vue-components
+import Header from "@/components/Header.vue";
+import Menu from "@/components/Menu.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
     name: 'App',
     components: {
-
+        Header,
+        Menu,
+        Footer,
     },
     created() {
 

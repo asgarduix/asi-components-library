@@ -1,9 +1,11 @@
 <template>
-    <div>test</div>
+    <div class="bg-yellow-100 frame__module footer">
+        footer
+    </div>
 </template>
 <script>
 export default {
-    name: "Page",
+    name: "Footer",
     components: {
 
     },

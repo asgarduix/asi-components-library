@@ -3,6 +3,7 @@
 .元件建立
 .命名規則
 .tailwind css
+.拆分元件
 
 
 【項目說明】
@@ -216,8 +217,13 @@ https://www.tailwindcss.cn/docs/customizing-colors
 
 ------------------------------------------------------------------------
 
-
-
+=== .拆分元件 =======================================================
+.App.vue：建立頁面主結構體，引入元件
+.main.js：引入css/js
+.靜態資源建議存放『assets』資料夾內，如：css/fonts/img
+.a連結必須使用<router-link>，如：
+<router-link :to="{ name: 'Page2' }">Page2</router-link>
+>> 帶入『views』內的『Page2.vue』內容，其他結構不重新載入
 
 
 

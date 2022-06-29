@@ -1,9 +1,9 @@
 <template>
-    <div>test</div>
+    <div>組件說明</div>
 </template>
 <script>
 export default {
-    name: "Page",
+    name: "Module",
     components: {
 
     },

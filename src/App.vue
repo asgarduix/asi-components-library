@@ -1,10 +1,10 @@
 <template>
     <div>
-        <!-- START: HEADER -->
-        <Header />
-        <!-- END: HEADER -->
         <div id="canvas">
             <div class="frame">
+                <!-- START: HEADER -->
+                <Header />
+                <!-- END: HEADER -->
                 <!-- START: CONTENT -->
                 <div class="flex bg-green-50 frame__module content">
                     <!-- c__nav -->
@@ -15,11 +15,11 @@
                     </div>
                 </div>
                 <!-- END: CONTENT -->
+                <!-- START: FOOTER -->
+                <Footer />
+                <!-- END: FOOTER -->
             </div>
         </div>
-        <!-- START: FOOTER -->
-        <Footer />
-        <!-- END: FOOTER -->
     </div>
 </template>
 <script>

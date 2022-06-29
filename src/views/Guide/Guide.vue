@@ -1,5 +1,5 @@
 <template>
-    <div>awojef;oakdfo;/</div>
+    <div>指南說明</div>
 </template>
 <script>
 export default {

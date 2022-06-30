@@ -2,7 +2,7 @@
 module.exports = {
     content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
     presets: [],
-    darkMode: 'media', // or 'class'
+    darkMode: 'class', // or 'class'media
     mode: 'jit',
     // These paths are just examples, customize them to match your project structure
     purge: [
@@ -50,6 +50,7 @@ module.exports = {
             fuchsia: colors.fuchsia,
             pink: colors.pink,
             rose: colors.rose,
+            tb: "#CCCCCC",
         }),
         columns: {
             auto: 'auto',

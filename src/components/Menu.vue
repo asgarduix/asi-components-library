@@ -1,5 +1,5 @@
 <template>
-    <div class="w-60 c__nav ">
+    <div class="w-60 c__nav bg-green-50 dark:bg-tb">
         <!-- c__nav-search -->
         <!-- <div class="c__nav-search">nav-search</div> -->
         <!-- c__nav-link -->
@@ -28,6 +28,9 @@
                         <li><a href="#">tertiary04</a></li>
                         <li><a href="#">tertiary05</a></li>
                         <li><a href="#">tertiary06</a></li>
+                        <li><button
+                        @click="click"
+                        >dark mode</button></li>
                     </ul>
                 </div>
             </div>
@@ -37,6 +40,7 @@
 <script>
 export default {
     name: "Menu",
+    props: ["props-in"],
     components: {
 
     },
@@ -44,13 +48,16 @@ export default {
 
     },
     data() {
-        return {};
+        return {
+        };
     },
     computed: {
 
     },
     methods: {
-
+        click() {
+            this.$emit('clickDark');
+        }
     },
 };
 </script>

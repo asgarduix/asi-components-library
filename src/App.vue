@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="isDark ? 'dark' : ''">
         <div id="canvas">
             <div class="frame">
                 <!-- START: HEADER -->
@@ -8,7 +8,7 @@
                 <!-- START: CONTENT -->
                 <div class="flex bg-green-50 frame__module content">
                     <!-- c__nav -->
-                    <Menu />
+                    <Menu @clickDark="isDark = !isDark"/>
                     <!-- c__views -->
                     <div class="flex-1 bg-red-100 c__views">
                         <router-view />
@@ -39,7 +39,9 @@ export default {
 
     },
     data() {
-        return {};
+        return {
+            isDark: false,
+        };
     },
     computed: {
 

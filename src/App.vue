@@ -40,11 +40,13 @@ export default {
     },
     data() {
         return {
-            isDark: false,
+            // isDark: false,
         };
     },
     computed: {
-
+        isDark(){
+            return this.$store.state.isDark
+        }
     },
     methods: {
 

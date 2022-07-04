@@ -10,6 +10,8 @@ import "./assets/css/material-icons-ie.css";
 import "./assets/css/tabulator.min.css";
 // tailwind
 import "./assets/css/tailwind.css";
+// layout
+import "./assets/css/layout.css";
 // customize
 import "./assets/css/customize.css";
 // pg
@@ -22,3 +24,11 @@ new Vue({
     store,
     render: h => h(App)
 }).$mount('#app')
+
+// 透過router設定每頁meta title
+router.beforeEach((to, from, next) => {
+    if (to.meta.title) {
+        document.title = to.meta.title
+    }
+    next();
+})

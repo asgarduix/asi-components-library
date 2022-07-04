@@ -23,6 +23,12 @@ module.exports = {
             '2xl': '1536px',
         },
         colors: ({ colors }) => ({
+            linkColor: {
+                Primary: '#319bd0',
+                Secondary: '#aaa',
+                Tertiary: '#444',
+            },
+            tb: "#ccc",
             inherit: colors.inherit,
             current: colors.current,
             transparent: colors.transparent,
@@ -50,7 +56,6 @@ module.exports = {
             fuchsia: colors.fuchsia,
             pink: colors.pink,
             rose: colors.rose,
-            tb: "#CCCCCC",
         }),
         columns: {
             auto: 'auto',

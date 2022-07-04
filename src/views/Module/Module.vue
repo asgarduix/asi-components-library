@@ -1,5 +1,5 @@
 <template>
-    <div>組件說明</div>
+    <div>Module-成功</div>
 </template>
 <script>
 export default {

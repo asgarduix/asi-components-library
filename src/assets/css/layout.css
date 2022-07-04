@@ -1,0 +1,54 @@
+/* START: Header */
+.h__topic span {
+	@apply text-3xl;
+}
+/* END: Header */
+/* START: Menu */
+.c__nav {
+    @apply px-4 py-6;
+}
+
+.c__nav-link-item {
+    @apply py-2.5 border-b border-gray-100;
+}
+
+.c__nav-link-item a {
+    @apply block pb-1.5 text-slate-600;
+}
+
+.c__nav-link-item a:hover {
+    @apply text-blue-700;
+}
+
+.c__nav-link-item--primary {
+    @apply pb-1.5 font-bold text-linkColor-Primary;
+}
+
+.c__nav-link-item--secondary {
+    @apply px-1 pt-0 pb-1.5 text-sm text-linkColor-Secondary;
+}
+
+.c__nav-link-item--tertiary {
+    @apply pb-3.5 text-linkColor-Tertiary;
+}
+
+/* END: Menu */
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 576px) {}
+
+@media only screen and (max-width: 440px) {}
+
+@media only screen and (max-width: 420px) {}

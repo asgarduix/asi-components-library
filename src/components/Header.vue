@@ -21,11 +21,14 @@
             <!-- START: h__topic -->
             <div class="table-cell align-middle text-right h__topic">
                 <ul class="border-r">
-                    <li class="inline-block">
+                    <li class="inline-block align-middle">
                         <router-link :to="{ name: 'Guide' }" class="px-4 text-blue-500 hover:text-blue-700 focus:text-blue-700">指南</router-link>
                     </li>
-                    <li class="inline-block">
+                    <li class="inline-block align-middle">
                         <router-link :to="{ name: 'Module' }" class="px-4 text-blue-500 hover:text-blue-700">組件</router-link>
+                    </li>
+                    <li class="inline-block align-middle">
+                        <a href="#" class="px-4 text-blue-500 hover:text-blue-700"><span class="material-icons">toggle_on</span></a>
                     </li>
                 </ul>
             </div>

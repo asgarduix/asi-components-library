@@ -6,11 +6,11 @@
                 <Header />
                 <!-- END: HEADER -->
                 <!-- START: CONTENT -->
-                <div class="flex bg-green-50 frame__module content">
+                <div class="flex bg-white frame__module content">
                     <!-- c__nav -->
-                    <Menu @clickDark="isDark = !isDark"/>
+                    <Menu @clickDark="isDark = !isDark" />
                     <!-- c__views -->
-                    <div class="flex-1 bg-red-100 c__views">
+                    <div class="flex-1 bg-gray-100 px-10 py-6 c__views">
                         <router-view />
                     </div>
                 </div>
@@ -40,11 +40,11 @@ export default {
     },
     data() {
         return {
-            // isDark: false,
+            //isDark: false,
         };
     },
     computed: {
-        isDark(){
+        isDark() {
             return this.$store.state.isDark
         }
     },

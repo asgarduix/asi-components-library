@@ -2,6 +2,10 @@
 	@apply bg-green-700;
 }
 
+.switchButton {
+	@apply absolute top-0.5 flex items-center justify-center bg-white w-6 h-6 rounded-full;
+}
+
 @media only screen and (max-width: 1280px) {
 }
 

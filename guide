@@ -4,6 +4,7 @@
 .命名規則
 .tailwind css
 .拆分元件
+.檔案說明
 
 
 【項目說明】
@@ -215,6 +216,40 @@ css生成為
 自定義顏色方法
 https://www.tailwindcss.cn/docs/customizing-colors
 
+於『tailwind.config.js』內的theme>colors中加入自定義顏色。如：
+colors: ({ colors }) => ({
+            linkPrimary: {
+                DEFAULT: '#319bd0',
+            },
+            inherit: colors.inherit,
+            current: colors.current,
+            transparent: colors.transparent,
+            black: colors.black,
+            white: colors.white,
+            slate: colors.slate,
+            gray: colors.gray,
+            zinc: colors.zinc,
+            neutral: colors.neutral,
+            stone: colors.stone,
+            red: colors.red,
+            orange: colors.orange,
+            amber: colors.amber,
+            yellow: colors.yellow,
+            lime: colors.lime,
+            green: colors.green,
+            emerald: colors.emerald,
+            teal: colors.teal,
+            cyan: colors.cyan,
+            sky: colors.sky,
+            blue: colors.blue,
+            indigo: colors.indigo,
+            violet: colors.violet,
+            purple: colors.purple,
+            fuchsia: colors.fuchsia,
+            pink: colors.pink,
+            rose: colors.rose,
+        }),
+以上自定義 link primary 的顏色
 ------------------------------------------------------------------------
 
 === .拆分元件 =======================================================
@@ -225,8 +260,9 @@ https://www.tailwindcss.cn/docs/customizing-colors
 <router-link :to="{ name: 'Page2' }">Page2</router-link>
 >> 帶入『views』內的『Page2.vue』內容，其他結構不重新載入
 
-
-
+=== .檔案說明 =======================================================
+.layout.css：設定框架（變動度低）
+.customize.css：不同專案的樣式設定
 
 
 

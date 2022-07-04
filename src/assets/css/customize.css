@@ -1,6 +1,3 @@
-.footer {
-	@apply bg-green-700;
-}
 
 .switchButton {
 	@apply absolute top-0.5 flex items-center justify-center bg-white w-6 h-6 rounded-full;
@@ -9,30 +6,20 @@
 @media only screen and (max-width: 1280px) {
 }
 
-@media only screen and (min-width: 1200px) {
-}
+@media only screen and (min-width: 1200px) {}
 
-@media only screen and (max-width: 1199px) {
-}
+@media only screen and (max-width: 1199px) {}
 
-@media only screen and (min-width: 992px) {
-}
+@media only screen and (min-width: 992px) {}
 
-@media only screen and (max-width: 991px) {
-}
+@media only screen and (max-width: 991px) {}
 
-@media only screen and (min-width: 768px) {
-}
+@media only screen and (min-width: 768px) {}
 
-@media only screen and (max-width: 767px) {
-}
+@media only screen and (max-width: 767px) {}
 
-@media only screen and (max-width: 576px) {
-}
+@media only screen and (max-width: 576px) {}
 
-@media only screen and (max-width: 440px) {
-}
+@media only screen and (max-width: 440px) {}
 
-@media only screen and (max-width: 420px) {
-}
-
+@media only screen and (max-width: 420px) {}
